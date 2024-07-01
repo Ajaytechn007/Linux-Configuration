@@ -1,0 +1,15 @@
+First of all, install the s3fs package on your system. That is available in the default system repositories. To install this package type:
+sudo apt update 
+sudo apt install s3fs 
+Create a directory to mount the S3 bucket
+sudo mkdir /mnt/s3-mount 
+Modify the permissions for the mount directory:
+sudo chmod 777 /mnt/s3-mount 
+Replace ACCESS_KEY and SECRET_KEY with your actual Amazon S3 access :
+echo ACCESS_KEY:SECRET_KEY > ~/.passwd-s3fs 
+sudo chmod 600 ~/.passwd-s3fs 
+Finally, use s3fs command line tool to mount your s3 bucket:
+Replace the “BUCKET_NAME”
+sudo s3fs BUCKET_NAME /mnt/s3-mount -o passwd_file=~/.passwd-s3fs 
+Verify It
+sudo df -h 
