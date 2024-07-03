@@ -1,3 +1,5 @@
+FOR UBUNTU SERVER
+
 First of all, install the s3fs package on your system. That is available in the default system repositories. To install this package type:
 sudo apt update 
 sudo apt install s3fs 
@@ -13,3 +15,6 @@ Replace the “BUCKET_NAME”
 sudo s3fs BUCKET_NAME /mnt/s3-mount -o passwd_file=~/.passwd-s3fs 
 Verify It
 sudo df -h 
+
+FOR AWS LINUX SERVER
+
