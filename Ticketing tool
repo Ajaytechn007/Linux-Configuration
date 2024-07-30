@@ -28,6 +28,7 @@ https://www.hesk.com/download.php
 
 sudo unzip hesk342.zip -d /var/www/html/hesk 
 
+
 sudo chown -R www-data:www-data /var/www/html/hesk 
 sudo chmod -R 755 /var/www/html/hesk 
 
